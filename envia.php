@@ -1,21 +1,31 @@
-<?php 
+<?php
+//Variáveis
 
-    $nome = addcslashes($_POST['nome']);
-    $email = addcslashes($_POST['email']);
-    $telefone = addcslashes($_POST['telefone']);
-    $msg = addcslashes($_POST['msg']);
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$telefone = $_POST['telefone'];
+$mensagem = $_POST['mensagem'];
 
-    $para = "murilohlodi@gmail.com";
 
-    $assunto = "Fala Comigo - Portfólio";
+//enviar
 
-    $corpo = "Nome: ".$nome."\n"."E-mail: ".$email."\n"."Celular".$telefone."\n"."Mensagem".$msg;
+  // emails para quem será enviado o formulário
+  $emailenviar = "murilohlodi@gmail.com";
+  $destino = $emailenviar;
+  $assunto = "Contato pelo Site";
 
-    $cabeca = "From: murlxff@gmail.com"."\n"."Reply-to: ".$email."\n"."X=Mailer:PHP/".phpversion();
+  // É necessário indicar que o formato do e-mail é html
+  $headers  = 'MIME-Version: 1.0' . "\r\n";
+      $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+      $headers .= 'From: $nome <$email>';
+  //$headers .= "Bcc: $EmailPadrao\r\n";
 
-    if(mail($para,$assunto,$corpo,$cabeca)){
-        echo("E-mail enviado com sucesso!")
-    }else{
-        echo("Houve um erro ao enviar o E-mail!");
-    }
+  $enviaremail = mail($destino, $assunto, $arquivo, $headers);
+  if($enviaremail){
+  $mgm = "E-MAIL ENVIADO COM SUCESSO! <br> O link será enviado para o e-mail fornecido no formulário";
+  echo " <meta http-equiv='refresh' content='10;URL=contato.php'>";
+  } else {
+  $mgm = "ERRO AO ENVIAR E-MAIL!";
+  echo "";
+  }
 ?>
