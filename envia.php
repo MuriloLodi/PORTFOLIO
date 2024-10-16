@@ -1,31 +1,21 @@
 <?php
-//Variáveis
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = htmlspecialchars($_POST['nome']);
+    $email = htmlspecialchars($_POST['email']);
+    $telefone = $_POST['telefone'];
+    $mensagem = htmlspecialchars($_POST['mensagem']);
 
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
-$mensagem = $_POST['mensagem'];
+    $to = "murilohlodi@gmail.com";
+    $subject = "Novo contato de $nome";
+    $body = "Nome: $nome\nE-mail: $email\n\nMensagem:\n$mensagem";
+    $headers = "From: $email";
 
-
-//enviar
-
-  // emails para quem será enviado o formulário
-  $emailenviar = "murilohlodi@gmail.com";
-  $destino = $emailenviar;
-  $assunto = "Contato pelo Site";
-
-  // É necessário indicar que o formato do e-mail é html
-  $headers  = 'MIME-Version: 1.0' . "\r\n";
-      $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-      $headers .= 'From: $nome <$email>';
-  //$headers .= "Bcc: $EmailPadrao\r\n";
-
-  $enviaremail = mail($destino, $assunto, $arquivo, $headers);
-  if($enviaremail){
-  $mgm = "E-MAIL ENVIADO COM SUCESSO! <br> O link será enviado para o e-mail fornecido no formulário";
-  echo " <meta http-equiv='refresh' content='10;URL=contato.php'>";
-  } else {
-  $mgm = "ERRO AO ENVIAR E-MAIL!";
-  echo "";
-  }
+    if (mail($to, $subject, $body, $headers)) {
+        echo "E-mail enviado com sucesso!";
+    } else {
+        echo "Falha ao enviar o e-mail.";
+    }
+} else {
+    echo "Método de requisição inválido.";
+}
 ?>

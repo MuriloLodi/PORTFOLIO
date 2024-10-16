@@ -15,6 +15,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivel.css" media="screen">
+    <script src="menu.js" defer></script>
     <title>Murilo Henrique Lodi</title>
     <link rel="shortcut icon" href="img/ico.png">
 </head>
@@ -25,26 +27,46 @@
         <div class="interface"><!--interface-->
             <div class="logo">
                 <a href="">
-                    <img src="img/logo.png" width="160" height="160" alt="">
+                    <img src="img/logo.png" width="160" height="160" alt="logo">
                 </a>
             </div>
             <nav class="desk-top">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="especialidades.html">Especialidades</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
                 </ul>
             </nav>
             <div class="bnt-contato">
-                <a href="https://wa.link/0rthol" target="_blank">
+                <a href="https://wa.me/5545999997579" target="_blank">
                     <button>Contato</button>
                 </a>
             </div>
+            <div class="btn-abrir" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#especialidades">Especialidades</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#projetos">Projetos</a></li>
+                            <li><a href="https://wa.me/5545999997579" target="_blank">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="overlay-menu" id="overlay-menu"></div>
         </div> <!--fim interface-->
     </header>
     <main>
-        <section class="topo-do-site">
+        <section id="inicio" class="topo-do-site">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
@@ -53,7 +75,7 @@
                             refletem meu compromisso com criatividade, inovação e qualidade. Explore à vontade e
                             descubra mais sobre meus projetos e minha trajetória profissional."</p>
                         <div class="bnt-contato">
-                            <a target="_blank" href="https://wa.link/0rthol">
+                            <a target="_blank" href="https://wa.me/5545999997579">
                                 <button>Entre em Contato</button>
                             </a>
                         </div>
@@ -66,7 +88,7 @@
             </div><!--interface-->
         </section><!--topo do site-->
 
-        <section class="especialidades">
+        <section id="especialidades" class="especialidades">
             <div class="interface">
                 <h2 class="title">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
@@ -97,7 +119,7 @@
             </div><!--interface-->
         </section><!--especialidades-->
 
-        <section class="sobre">
+        <section id="sobre" class="sobre">
             <div class="interface">
                 <div class="flex">
                     <div class="img-sobre">
@@ -127,39 +149,64 @@
             </div><!--interface-->
         </section><!--sobre-->
 
-        <section class="portfolio">
+        <section id="projetos" class="portfolio">
             <div class="interface">
                 <h2 class="title">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
                     <div class="img-port" style="background-image: url(img/siteleo.png);">
-                        <div class="overlay">Design Figma</div>
+                        <div class="overlay item1">Design Figma</div>
                     </div>
                     <div class="img-port" style="background-image: url(img/siteleo.png);">
-                        <div class="overlay">
+                        <div class="overlay item2">
                             Design Figma
                         </div>
                     </div>
                     <div class="img-port" style="background-image: url(img/siteleo.png);">
-                        <div class="overlay">Design Figma</div>
+                        <div class="overlay item3">Design Figma</div>
                     </div>
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--portfolio-->
 
-        <section class="formulario">
+        <section id="" class="formulario">
             <div class="interface">
                 <h2 class="title">FALA <span>COMIGO.</span></h2>
                 <form method="post" action="envia.php">
                     <input type="text" id="nome" name="nome" placeholder="Seu nome completo:" required>
                     <input type="text" id="email" name="email" placeholder="Seu e-mail:" required>
                     <input type="text" id="telefone" name="telefone" placeholder="Seu celular:">
-                    <textarea name="" id="msg" placeholder="Sua mensagem" required></textarea>
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
                     <div class="btn-enviar"> <input type="submit" value="ENVIAR"></div>
 
                 </form>
             </div><!--interface-->
         </section><!--formulario-->
     </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="img/logo 1 (1).png" width="90" height="70" alt="logo">
+                    </div>
+                    <div class="bnt-social">
+                        <a href="https://www.instagram.com/murilorkk/" target="_blank"><button><i
+                                    class="bi bi-instagram"></i></button></a>
+                        <a href="https://br.linkedin.com/in/murilo-henrique-lodi-0040a1268" target="_blank"><button><i
+                                    class="bi bi-linkedin"></i></button></a>
+                        <a href="https://wa.link/0rthol" target="_blank"><button><i
+                                    class="bi bi-whatsapp"></i></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:murilohlodi@gmail.com">murilohlodi@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
