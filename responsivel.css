@@ -50,12 +50,15 @@
     
     section.especialidades .flex {
         gap: 40px;
-        flex-direction: column;
     }
     
+    .especialidades h2{
+        padding: 40px 0;
+    }
     .especialidades .especialidades-box {
         padding: 40px;
-        margin-top: 45px;
+        margin: 0px auto;
+
     }
     
     .especialidades .especialidades-box i {

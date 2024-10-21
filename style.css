@@ -202,7 +202,10 @@ section.especialidades {
 }
 
 section.especialidades .flex {
-    gap: 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }
 
 .especialidades .especialidades-box {
@@ -211,6 +214,9 @@ section.especialidades .flex {
     margin-top: 45px;
     border-radius: 20px;
     transition: .2s;
+    text-align: center;
+    width: 200px;
+    height: 200px;
 }
 
 .especialidades .especialidades-box:hover {
@@ -219,15 +225,22 @@ section.especialidades .flex {
 }
 
 
+.especialidades .especialidades-box ion-icon {
+    font-size: 70px;
+    color: #ff0000;
+
+}
 .especialidades .especialidades-box i {
     font-size: 70px;
     color: #ff0000;
 }
 
 .especialidades .especialidades-box h3 {
-    font-size: 27px;
+    font-size: 20px;
     margin: 15px 0;
+
 }
+
 
 /* ESTILO DO SOBRE */
 
@@ -353,7 +366,6 @@ form textarea {
 form .btn-enviar {
     margin-top: 20px;
     text-align: center;
-
 }
 
 form .btn-enviar input {
