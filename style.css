@@ -330,6 +330,12 @@ section.portfolio .flex {
     opacity: 1;
 }
 
+.img-port a{
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
 /* ESTILO DO FALA COMIGO */
 
 section.formulario {
