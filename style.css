@@ -230,6 +230,12 @@ section.especialidades .flex {
     color: #ff0000;
 
 }
+.especialidades .especialidades-box img {
+    width: 70px;
+    height: auto;
+    margin-top: 0px;
+}
+    
 .especialidades .especialidades-box i {
     font-size: 70px;
     color: #ff0000;
@@ -424,3 +430,4 @@ footer .line-footer p i {
 footer .line-footer p a {
     color: white;
 }
+
