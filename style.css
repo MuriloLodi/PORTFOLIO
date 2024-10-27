@@ -21,6 +21,11 @@ body {
     display: flex;
 }
 
+.efeito-txt-topo, .efeito-img-topo, .title, .efeitos-especial1, .efeitos-especial2, .efeitos-especial3, .efeitos-especial4, .efeitos-especial5, .efeitos-especial6, .efeitos-especial7, .efeitos-especial8, .efeito-img-sobre, .efeito-txt-sobre, .port1, .port2, .port3  {
+    visibility: hidden;
+}
+
+
 .bnt-contato button {
     padding: 10px 40px;
     font-size: 18px;

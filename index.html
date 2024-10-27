@@ -15,6 +15,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="reveal.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsivel.css" media="screen">
     <script src="menu.js" defer></script>
@@ -66,11 +68,12 @@
             <div class="overlay-menu" id="overlay-menu"></div>
         </div> <!--fim interface-->
     </header>
+
     <main>
         <section id="inicio" class="topo-do-site">
             <div class="interface">
                 <div class="flex">
-                    <div class="txt-topo-site">
+                    <div class="txt-topo-site efeito-txt-topo">
                         <h1>SEJA BEM-VINDO AO MEU PORTFÓLIO<span>.</span></h1>
                         <p>"Bem-vindo ao meu portfólio! Aqui você encontrará uma seleção dos meus trabalhos, que
                             refletem meu compromisso com criatividade, inovação e qualidade. Explore à vontade e
@@ -82,7 +85,7 @@
                         </div>
                     </div><!--txt topo site-->
 
-                    <div class="img-topo-site">
+                    <div class="img-topo-site efeito-img-topo">
                         <img src="img/logo.png" alt="">
                     </div>
                 </div>
@@ -93,35 +96,35 @@
             <div class="interface">
                 <h2 class="title">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
-                    <div class="especialidades-box">
+                    <div class="especialidades-box efeitos-especial1">
                         <ion-icon name="logo-html5"></ion-icon>
                         <h3>HTML</h3>
                     </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+                    <div class="especialidades-box efeitos-especial2">
                         <ion-icon name="logo-css3"></ion-icon>
                         <h3 class="h33">CSS</h3>
                     </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+                    <div class="especialidades-box efeitos-especial3">
                         <ion-icon name="logo-javascript"></ion-icon>
                         <h3>JavaScript</h3>
                     </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+                    <div class="especialidades-box efeitos-especial4">
                         <ion-icon name="logo-tux"></ion-icon>
                         <h3 >Ubuntu Server</h3>
                     </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+                    <div class="especialidades-box efeitos-especial5">
                         <i class="fa-brands fa-figma"></i>
                         <h3>Figma</h3>
                     </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+                    <div class="especialidades-box efeitos-especial6">
                         <i class="fa-brands fa-java"></i>
                         <h3>Java</h3>
                     </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+                    <div class="especialidades-box efeitos-especial7">
                         <i class="fa-solid fa-database"></i>
                         <h3>PostgreSQL</h3>
                     </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+                    <div class="especialidades-box efeitos-especial8">
                         <img src="img/icons8-tailwindcss-48.png" alt="">
                         <h3>TailwindCSS</h3>
                     </div><!--especialidades-box-->
@@ -132,10 +135,10 @@
         <section id="sobre" class="sobre">
             <div class="interface">
                 <div class="flex">
-                    <div class="img-sobre">
+                    <div class="img-sobre efeito-img-sobre">
                         <img src="img/Imagem do WhatsApp de 2024-10-15 à(s) 09.31.44_01b94e88.jpg" alt="minha foto">
                     </div> <!--img-sobre-->
-                    <div class="txt-sobre">
+                    <div class="txt-sobre efeito-txt-sobre">
                         <h2>MUITO PRAZER, <span>SOU MURILO HENRIQUE LODI.</span></h2>
                         <p>Meu nome é Murilo Henrique Lodi, tenho 19 anos e sou estudante de Sistemas para Internet na
                             UTFPR. Estou no início da minha carreira como desenvolvedor e sou apaixonado por tecnologia.
@@ -163,20 +166,20 @@
             <div class="interface">
                 <h2 class="title">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(img/siteleo.png);">
+                    <div class="img-port port1" style="background-image: url(img/siteleo.png);">
                         <div class="overlay item1"><a href="https://murilolodi.github.io/Site-MTA/"> NJRP<br>Site de Vendas</a></div>
                     </div>
-                    <div class="img-port" style="background-image: url(img/screencapture-lodiscafeteria-netlify-app-pageinicio-2024-10-24-15_20_41.png);">
+                    <div class="img-port port2" style="background-image: url(img/screencapture-lodiscafeteria-netlify-app-pageinicio-2024-10-24-15_20_41.png);">
                         <div class="overlay item1"><a href="https://lodiscafeteria.netlify.app/pageinicio"> Lodi's Coffee<br>Site de uma Cafeteria<br>(Em desenvolvimento)</a></div>
                     </div>
-                    <div class="img-port" style="background-image: url(img/siteleo.png);">
+                    <div class="img-port port3" style="background-image: url(img/siteleo.png);">
                         <div class="overlay item3">Design Figma</div>
                     </div>
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--portfolio-->
 
-        <section id="" class="formulario">
+       <!-- Parou de Funcionar <section id="" class="formulario">
             <div class="interface">
                 <h2 class="title">FALA <span>COMIGO.</span></h2>
                 <form method="post" action="envia.php">
@@ -187,8 +190,8 @@
                     <div class="btn-enviar"> <input type="submit" value="ENVIAR"></div>
 
                 </form>
-            </div><!--interface-->
-        </section><!--formulario-->
+            </div>
+        </section>-->
     </main>
 
     <footer>
@@ -214,6 +217,8 @@
             </div>
         </div>
     </footer>
+    <script src="reveal.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://kit.fontawesome.com/ba682a02a4.js" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
